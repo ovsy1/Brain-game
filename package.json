@@ -1,0 +1,19 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "brain game project hexlet",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ovsy1/frontend-project-lvl1.git"
+  },
+  "author": "Ratmir Kalimulin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ovsy1/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/ovsy1/frontend-project-lvl1#readme"
+}

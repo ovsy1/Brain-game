@@ -7,3 +7,6 @@
 ### GitHub Actions: 
 ![example workflow](https://github.com/ovsy1/frontend-project-lvl1/actions/workflows/linter.yml/badge.svg)
 
+### brain-even:
+[![asciicast](https://asciinema.org/a/453285.svg)](https://asciinema.org/a/453285)
+

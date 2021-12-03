@@ -4,14 +4,26 @@
 /* eslint-disable eol-last */
 import readlineSync from 'readline-sync';
 
-const getRandomNumber = (minNum, maxNum) => {
-  const min = Math.ceil(minNum);
-  const max = Math.floor(maxNum);
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+const startBrainGame = (rule, brainGame) => {
+  const roundCount = 3;
+
+  console.log('Welcome to the Brain Game!');
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}`);
+  console.log(rule);
+
+  for (let i = 0; i < roundCount; i += 1) {
+    const [questionNum, correctAnswer] = brainGame();
+    console.log(`Question: ${questionNum}`);
+    const userAnswer = readlineSync.question('Your answer: ');
+    if (userAnswer !== correctAnswer) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'`);
+      console.log(`Let's try again, ${userName}`);
+      return;
+    }
+    console.log('Correct!');
+  }
+  console.log(`Congratulatios, ${userName}`);
 };
 
-console.log('Welcome to the Brain Games!');
-const userName = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${userName}!`);
-
-export { getRandomNumber, userName };
+export default startBrainGame;

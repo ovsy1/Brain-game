@@ -1,5 +1,4 @@
 /* eslint-disable linebreak-style */
-/* eslint-disable import/extensions */
 import getRandomNumber from '../getRandomNumber.js';
 
 const rule = 'What number is missing in the progression?';

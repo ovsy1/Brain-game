@@ -1,7 +1,4 @@
 /* eslint-disable linebreak-style */
-/* eslint-disable no-console */
-/* eslint-disable linebreak-style */
-/* eslint-disable eol-last */
 import readlineSync from 'readline-sync';
 
 const startBrainGame = (rule, brainGame) => {

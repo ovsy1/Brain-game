@@ -23,7 +23,7 @@ const startBrainGame = (rule, brainGame) => {
     }
     console.log('Correct!');
   }
-  console.log(`Congratulatios, ${userName}`);
+  console.log(`Congratulations, ${userName}`);
 };
 
 export default startBrainGame;

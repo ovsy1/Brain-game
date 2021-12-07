@@ -1,9 +1,9 @@
 /* eslint-disable linebreak-style */
 import readlineSync from 'readline-sync';
 
-const startBrainGame = (rule, brainGame) => {
-  const roundCount = 3;
+const roundCount = 3;
 
+const startBrainGame = (rule, brainGame) => {
   console.log('Welcome to the Brain Game!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}`);

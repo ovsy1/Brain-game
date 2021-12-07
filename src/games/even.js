@@ -1,20 +1,17 @@
 /* eslint-disable linebreak-style */
 import getRandomNumber from '../getRandomNumber.js';
+import startBrainGame from '../index.js';
 
 const rule = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const numIsEven = (num) => num % 2 === 0;
 
 const isEvenGame = () => {
-  const num = getRandomNumber(1, 100);
-  const question = num;
-  let correctAnswer = '';
-  if (numIsEven(num)) {
-    correctAnswer = 'yes';
-  } else {
-    correctAnswer = 'no';
-  }
+  const question = getRandomNumber(1, 100);
+  const correctAnswer = numIsEven(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
 
-export { rule, isEvenGame };
+const startIsEvenGame = () => startBrainGame(rule, isEvenGame);
+
+export default startIsEvenGame;

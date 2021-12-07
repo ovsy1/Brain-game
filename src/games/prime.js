@@ -1,5 +1,6 @@
 /* eslint-disable linebreak-style */
 import getRandomNumber from '../getRandomNumber.js';
+import startBrainGame from '../index.js';
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -23,4 +24,6 @@ const isPrimeGame = () => {
   return [question, correctAnswer];
 };
 
-export { rule, isPrimeGame };
+const startIsPrimeGame = () => startBrainGame(rule, isPrimeGame);
+
+export default startIsPrimeGame;

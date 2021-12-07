@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 /* eslint-disable linebreak-style */
-import { rule, gcdGame } from '../src/games/gcd.js';
-import startBrainGame from '../src/index.js';
+import startGcdGame from '../src/games/gcd.js';
 
-startBrainGame(rule, gcdGame);
+startGcdGame();

@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 /* eslint-disable linebreak-style */
-import { rule, progressionGame } from '../src/games/progression.js';
-import startBrainGame from '../src/index.js';
+import startProgressionGame from '../src/games/progression.js';
 
-startBrainGame(rule, progressionGame);
+startProgressionGame();

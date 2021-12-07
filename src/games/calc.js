@@ -2,8 +2,6 @@
 import getRandomNumber from '../getRandomNumber.js';
 import startBrainGame from '../index.js';
 
-const mathSigns = ['+', '-', '*'];
-
 const rule = 'What is the result of the expression?';
 
 const calculator = (firstNum, secondNum, mathSign) => {
@@ -15,15 +13,18 @@ const calculator = (firstNum, secondNum, mathSign) => {
     case '*':
       return firstNum * secondNum;
     default:
-      return `${mathSign} is not supported.`;
+      return null;
   }
 };
 
+const mathSigns = ['+', '-', '*'];
+
 const calculatorGame = () => {
-  const countMathSigns = mathSigns.length;
+  const countMathSigns = mathSigns.length - 1;
   const firstNum = getRandomNumber(1, 50);
   const secondNum = getRandomNumber(1, 50);
   const randomMathSigh = getRandomNumber(0, countMathSigns);
+
   const question = `${firstNum} ${mathSigns[randomMathSigh]} ${secondNum}`;
   const correctAnswer = String(calculator(firstNum, secondNum, mathSigns[randomMathSigh]));
   return [question, correctAnswer];

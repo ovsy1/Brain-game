@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 import readlineSync from 'readline-sync';
 
 const roundCount = 3;

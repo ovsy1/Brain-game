@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 const getRandomNumber = (minNum, maxNum) => {
   const min = Math.ceil(minNum);
   const max = Math.floor(maxNum);

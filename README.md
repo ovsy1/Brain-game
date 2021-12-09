@@ -3,7 +3,7 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/9e4b52a10a618740b115/maintainability)](https://codeclimate.com/github/ovsy1/frontend-project-lvl1/maintainability)
 
-![example workflow](https://github.com/ovsy1/frontend-project-lvl1/actions/workflows/linter.yml)
+![example workflow](https://github.com/ovsy1/frontend-project-lvl1/actions/workflows/linter.yml/badge.svg)
 
 ## It's a Brain Games
 

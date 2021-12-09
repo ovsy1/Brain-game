@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 import getRandomNumber from '../getRandomNumber.js';
 import startBrainGame from '../index.js';
 

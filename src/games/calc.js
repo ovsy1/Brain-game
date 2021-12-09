@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 import getRandomNumber from '../getRandomNumber.js';
 import startBrainGame from '../index.js';
 
@@ -20,10 +19,9 @@ const calculator = (firstNum, secondNum, mathSign) => {
 const mathSigns = ['+', '-', '*'];
 
 const calculatorGame = () => {
-  const countMathSigns = mathSigns.length - 1;
   const firstNum = getRandomNumber(1, 50);
   const secondNum = getRandomNumber(1, 50);
-  const randomMathSigh = getRandomNumber(0, countMathSigns);
+  const randomMathSigh = getRandomNumber(0, mathSigns.length - 1);
 
   const question = `${firstNum} ${mathSigns[randomMathSigh]} ${secondNum}`;
   const correctAnswer = String(calculator(firstNum, secondNum, mathSigns[randomMathSigh]));

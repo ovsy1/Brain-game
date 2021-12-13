@@ -1,19 +1,31 @@
-env:
-  node: true
-  es2020: true
+name: linter
 
-extends:
-  - 'airbnb-base'
-  - 'plugin:jest/recommended'
+on:
+  push:
+    branches: [ main ]
 
-parserOptions:
-  ecmaVersion: 11
-  sourceType: module
+jobs:
+  build:
 
-rules:
-  no-console: 0
-  import/extensions:
-    - error
-    - ignorePackages
-    - js: always
-  no-underscore-dangle: [2, { "allow": ["__filename", "__dirname"] }]
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [17.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: npm install
+        run: |
+          make install
+        env:
+          CI: true  
+      - name: Run Linter
+        run: |
+          make lint
+
+          

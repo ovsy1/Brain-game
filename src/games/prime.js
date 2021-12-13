@@ -19,9 +19,9 @@ const isPrime = (num) => {
 const isPrimeGame = () => {
   const num = getRandomNumber(0, 1000);
   const question = num;
-  String(question);
-  const correctAnswer = isPrime(question) ? 'yes' : 'no';
-  return [question, correctAnswer];
+  const strQuestion = String(question);
+  const correctAnswer = isPrime(strQuestion) ? 'yes' : 'no';
+  return [strQuestion, correctAnswer];
 };
 
 const startIsPrimeGame = () => startBrainGame(rule, isPrimeGame);

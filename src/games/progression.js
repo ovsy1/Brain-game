@@ -12,10 +12,10 @@ const generateProgression = (startNum, stepProgression, progressionLength) => {
 
 const progressionGame = () => {
   const firstNumber = getRandomNumber(1, 10);
-  const Step = getRandomNumber(1, 10);
+  const step = getRandomNumber(1, 10);
   const progressionLength = getRandomNumber(5, 10);
 
-  const progression = generateProgression(firstNumber, Step, progressionLength);
+  const progression = generateProgression(firstNumber, step, progressionLength);
   const hiddenIndex = getRandomNumber(0, progressionLength);
 
   const correctAnswer = String(progression[hiddenIndex]);

@@ -20,10 +20,10 @@ const mathSigns = ['+', '-', '*'];
 const calculatorGame = () => {
   const firstNum = getRandomNumber(1, 50);
   const secondNum = getRandomNumber(1, 50);
-  const MathSigh = getRandomNumber(0, mathSigns.length - 1);
+  const mathSign = getRandomNumber(0, mathSigns.length - 1);
 
-  const question = `${firstNum} ${mathSigns[MathSigh]} ${secondNum}`;
-  const correctAnswer = String(calculator(firstNum, secondNum, mathSigns[MathSigh]));
+  const question = `${firstNum} ${mathSigns[mathSign]} ${secondNum}`;
+  const correctAnswer = String(calculator(firstNum, secondNum, mathSigns[mathSign]));
   return [question, correctAnswer];
 };
 

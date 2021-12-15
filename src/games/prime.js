@@ -17,10 +17,8 @@ const isPrime = (num) => {
 
 const isPrimeGame = () => {
   const num = getRandomNumber(0, 1000);
-  const question = num;
-  const strQuestion = String(question);
-  const correctAnswer = isPrime(strQuestion) ? 'yes' : 'no';
-  return [strQuestion, correctAnswer];
+  const correctAnswer = isPrime(num) ? 'yes' : 'no';
+  return [num, correctAnswer];
 };
 
 const primeGame = () => [rule, isPrimeGame];
